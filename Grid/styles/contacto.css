@@ -1,0 +1,91 @@
+.content-grid{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 50vh auto 5em;
+    grid-template-areas: 
+    "header  header  header  header  header  header"
+    "form    form    form    form    form    form"
+    "footer  footer  footer  footer  footer  footer";
+    row-gap: 1em;
+    column-gap: .5em;
+  } 
+
+  .form{
+    background-image: url("../images/fondo-contacto.jpg");
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    flex-direction: column;
+    grid-area: form;
+    text-align: center;
+  }
+
+  .formulario{
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: .5em;
+    padding: 1em;
+    text-align: start;
+  }
+  .formulario p {
+    
+    color: white;
+    padding: 1em;
+    text-align: center;
+  }
+.contact{
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+}
+.title-contact{
+    color: white;
+    font-size: 2em;
+    margin-top: 1em;
+    margin-bottom: 0;
+}
+.list-contact{
+    border-bottom: solid .2em white;
+    border-top: solid .2em white;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1em;
+    font-size: 1.5em;
+    width: 100%;
+}
+.item-contact, .item-contact a{
+    color: white;
+    text-decoration: none;
+    list-style: none;
+}
+.item-contact a:hover{
+    text-decoration: underline;
+}
+
+
+@media (max-width: 768px){
+    .formulario{
+        width: 100%;
+    }
+    li{
+        border:none;
+    }
+    .contact{
+        width: 100%;
+    }
+    .list-contact{
+        font-size: 1em;
+        width: auto;
+    }
+}

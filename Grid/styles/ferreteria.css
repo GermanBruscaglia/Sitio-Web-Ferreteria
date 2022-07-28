@@ -1,0 +1,92 @@
+  .content-grid{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 50vh auto 25em 5em;
+    grid-template-areas: 
+    "header  header  header  header  header  header"
+    "aside   main   main    main    main    main"
+    "article article article article article article"
+    "footer  footer  footer  footer  footer  footer";
+    row-gap: 1em;
+    column-gap: .5em;
+  } 
+.main{
+    background-image: none;
+}
+.content-product{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.proudct{
+    border: solid .2em black;
+    margin: auto 1em 1em 1em;
+    padding: 1em;
+}
+
+.article{
+    background-image: url("../images/fondo-article-pagos.jpg");
+    background-position: center center ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    grid-area: article;
+    justify-content: center;
+}
+.content-article{
+    justify-content: center;
+}
+.content-pay{
+    display: flex;
+    justify-content: center;
+}
+.pay{
+    border: .2em solid white;
+    margin: 2em;
+    padding: .2em 2em 2em 2em
+}
+.title-pay{
+    margin-top: 0  ;
+}
+
+
+
+@media (max-width: 768px){
+    .content-grid{
+      grid-template-rows: 35vh auto auto auto 5em;
+      grid-template-areas: 
+      "header  header  header  header  header  header"
+      "aside   aside   aside   aside   aside   aside"
+      "main   main   main    main    main    main"
+      "article article article article article article"
+      "footer  footer  footer  footer  footer  footer";
+    }
+    .content-product{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .title-aside{
+      display: none;
+    }
+    .content-article{
+        height: auto;
+    }
+    .content-pay{
+        flex-direction: column;
+    }
+  }
+
+   @media (max-width: 480px){
+    .content-grid{
+      grid-template-rows: 35vh auto auto auto 5em;
+    }
+    .content-product{
+        grid-template-columns: 1fr;
+    }
+    .content-pay{
+        flex-direction: column;
+    }
+    .title-article{
+        font-size: 1.5em;
+    }
+  } 

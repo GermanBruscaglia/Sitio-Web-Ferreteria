@@ -1,0 +1,80 @@
+.content-grid{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 50vh auto 25em 5em;
+    grid-template-areas: 
+    "header  header                header                header                 header                 header"
+    "aside   first-content-tools   first-content-tools   first-content-tools    first-content-tools    first-content-tools"
+    "article article               article               article                article                article"
+    "footer  footer                footer                footer                 footer                 footer";
+    row-gap: 1em;
+    column-gap: .5em;
+  } 
+  .first-content-tools{
+    grid-area: first-content-tools;
+  }
+.content-tools{
+    column-gap: .5em;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    padding: 1em;
+    row-gap: .5em;
+}
+.title-product-tools{
+    grid-column-start: 1;
+    grid-column-end: 7;
+    text-align: center;
+}
+.tools{
+    background-color: rgba(0, 0, 0, 0.6);
+    border: solid .2em black;
+    color: white;
+    text-align: center;
+    font-size: 1em;
+    padding: .5em;
+}
+.title-tools{
+    font-size: 1em;
+}
+.text-tools{
+    font-size: 1em;
+}
+
+.fixed{
+    background-color: rgba(0, 0, 0, 0.6);
+    bottom: 2em;
+    border-radius: 50%;
+    color: white;
+    left: 2em;
+    padding: .5em;
+    position: fixed;
+}
+
+@media (max-width: 768px){
+    .content-grid{
+        grid-template-rows: 50vh auto  auto auto 5em;
+        grid-template-areas: 
+        "header                 header                header                header                 header                 header"
+        "aside                  aside                 aside                 aside                  aside                  aside" 
+        "first-content-tools   first-content-tools   first-content-tools    first-content-tools    first-content-tools    first-content-tools"
+        "article               article               article               article                 article                article"
+        "footer                footer                footer                footer                  footer                 footer";
+      } 
+    .content-tools{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .title-product-tools{
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+}
+
+@media (max-width: 480px){
+    .content-tools{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .title-product-tools{
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+}
